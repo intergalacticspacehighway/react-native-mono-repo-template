@@ -1,13 +1,21 @@
 import * as React from "react";
 
-import { StyleSheet, View, Text } from "react-native";
-import { A } from "@react-native-mono-template/package-a";
+import { StyleSheet, Pressable, Text } from "react-native";
+import { useButton } from "@react-native-aria/button";
+import { OverlayContainer, OverlayProvider } from "@react-native-aria/overlays";
 
 export default function App() {
+  const ref = React.useRef(null);
   return (
-    <View style={styles.container}>
-      <A />
-    </View>
+    <OverlayProvider>
+      <Pressable ref={ref}>
+        {/* <A /> */}
+        <Text>Hello</Text>
+      </Pressable>
+      <OverlayContainer>
+        <Text>Hello world</Text>
+      </OverlayContainer>
+    </OverlayProvider>
   );
 }
 

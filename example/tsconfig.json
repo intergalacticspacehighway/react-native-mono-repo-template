@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "paths": {
-      "@react-native-mono-template/*": ["../packages/*/src/index"]
+      "@react-native-aria/*": ["../packages/*/src/index"]
     },
   }
 }

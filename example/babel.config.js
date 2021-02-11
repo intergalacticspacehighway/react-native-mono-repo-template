@@ -4,7 +4,7 @@ const pak = require("../package.json");
 const packagesPath = path.join(__dirname, "..", "packages");
 
 const alias = {
-  "^@react-native-mono-template/(.+)": `${packagesPath}/\\1/src`,
+  "^@react-native-aria/(.+)": `${packagesPath}/\\1/src`,
 };
 
 module.exports = function (api) {
