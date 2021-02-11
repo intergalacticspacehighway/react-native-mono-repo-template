@@ -19,6 +19,8 @@ module.exports = async function (env, argv) {
   Object.assign(config.resolve.alias, {
     ...resolver.extraNodeModules,
     "react-native-web": path.join(node_modules, "react-native-web"),
+    // Major Hack : Fix later, Resolve to root react to prevent invalid hook call error
+    react: path.join(root, "node_modules", "react"),
   });
 
   return config;
